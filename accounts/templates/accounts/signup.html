@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block title %}signup page{% endblock title %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">sign up</button>
+    </form>
+{% endblock content %}
+
+
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Sign Up</title>#}
+{#    <style>#}
+{#        .sign-up-form {#}
+{#            width: 300px;#}
+{#            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);#}
+{#            background: #fff;#}
+{#            padding: 20px;#}
+{#            margin: 8% auto;#}
+{#            text-align: center;#}
+{#        }#}
+{##}
+{#        .sign-up-form h1 {#}
+{#            color: #1c8adb;#}
+{#            margin-bottom: 30px;#}
+{#        }#}
+{##}
+{#        .input-box {#}
+{#            border-radius: 20px;#}
+{#            height: 25px;#}
+{#            padding: 5px;#}
+{#            margin-top: 5px;#}
+{#            width: 100%;#}
+{#            border: 1px solid blue;#}
+{#            outline: none;#}
+{#        }#}
+{##}
+{#        .input-boxsingup {#}
+{#            border-radius: 20px;#}
+{#            padding: 10px;#}
+{#            margin: 10px 0;#}
+{#            width: 100%;#}
+{#            border: 1px solid blue;#}
+{#            outline: none;#}
+{#            background-color: #21afde;#}
+{#            text-decoration-color: white;#}
+{#        }#}
+{##}
+{#        button {#}
+{#            color: #fff;#}
+{#            width: 100%;#}
+{#            padding: 10px;#}
+{#            border-radius: 20px;#}
+{#            font-size: 15px;#}
+{#            margin: 10px 0;#}
+{#            border: none;#}
+{#            outline: none;#}
+{#            cursor: pointer;#}
+{#        }#}
+{##}
+{#        .signup-btn {#}
+{#            background-color: #1c8adb;#}
+{#        }#}
+{##}
+{#        .login-button {#}
+{#            background-color: #21afde;#}
+{#        }#}
+{##}
+{#        a {#}
+{#            text-decoration: none;#}
+{#        }#}
+{##}
+{#        hr {#}
+{#            margin-top: 20px;#}
+{#            width: 80%;#}
+{#        }#}
+{##}
+{#        .or {#}
+{#            background: #fff;#}
+{#            width: 30px;#}
+{#            margin: -19px auto 10px;#}
+{#        }#}
+{##}
+{#        .input-box:hover {#}
+{#            animation: animation 5s ease;#}
+{#        }#}
+{##}
+{#        @keyframes animation {#}
+{#            50% {#}
+{#                box-shadow: 5px 5px 10px 5px lightblue;#}
+{#            }#}
+{#        }#}
+{#    </style>#}
+{#</head>#}
+{#<body>#}
+{#<div class="sign-up-form">#}
+{#    <h1>Sign Up Now</h1>#}
+{#    <form method="POST" action="{% url 'signup' %}">#}
+{#        {% csrf_token %}#}
+{#        <input type="email" class="input-box" name="email" placeholder="Email" required>#}
+{#        <input type="text" class="input-box" name="username" placeholder="UserName" maxlength="12" required>#}
+{#        <input type="password" class="input-box" name="password" placeholder="Password" maxlength="8" required>#}
+{#       <a href="{% url 'login' %}">sing up </a>#}
+{#        <input type="submit" class="input-boxsingup" value="sign up" >#}
+{#        <hr>#}
+{#        <p class="or">OR</p>#}
+{#        <p>Do you have an account?</p>#}
+{#        <a href="{% url 'login' %}" class="login-button">Log in</a>#}
+{#    </form>#}
+{#</div>#}
+{#</body>#}
+{#</html>#}
